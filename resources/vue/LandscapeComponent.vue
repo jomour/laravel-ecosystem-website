@@ -1,22 +1,36 @@
 <template>
-    <div class="tech-landscape">
-      <div class="category" v-for="category in toolslist" :key="category.name">
-        <h2 class="category-title">{{ category.name }}</h2>
-        <div class="sub-categories">
-          <div 
-            class="sub-category" 
-            v-for="subCategory in category.sub_categories" 
-            :key="subCategory.name"
-          >
-            <h3 class="sub-category-title" >{{ subCategory.name }}</h3>
-            <div class="tools">
-              <div class="tool" v-for="tool in subCategory.tools" :key="tool" @click.stop="selectTool(tool)">
-                <img :src="tool.imagePath" :alt="tool.name" class="tool-image"/>
-            </div>
+    <div id="tech-landscape">
+
+      <!-- FILTER SECTION-->
+      <div class="search-input-container">
+        <input 
+          type="text" 
+          class="search-input" 
+          v-model="filterBy" 
+          @input="search"
+          placeholder="Rechercher...">
+      </div>
+      <div class="category" v-for="category in filteredToolList" :key="category.name">
+        
+          <!-- CATEGORY SECTION-->
+          <h2 class="category-title">{{ category.name }}</h2>
+          <div class="sub-categories">
+            <div class="sub-category" v-for="subCategory in category.sub_categories" :key="subCategory.name">
+              
+              <!-- SUBCATEGORY SECTION-->  
+              <div v-if="subCategory.tools.length > 0">
+                  <h3 class="sub-category-title" >{{ subCategory.name }}</h3>
+                  <div class="tools">
+                    <div class="tool" v-for="tool in subCategory.tools" :key="tool" @click.stop="selectTool(tool)">
+                      <img :src="tool.imagePath" :alt="tool.name" class="tool-image"/>
+                    </div>
+                  </div>
+              </div>
+              <!--END  SUBCATEGORY SECTION--> 
             </div>
           </div>
         </div>
-      </div>
+
     </div>
 
     <div v-if="selectedTool" ref="popup" class="popup">
@@ -44,102 +58,13 @@
   <script>
   export default {
     props: {
-      toolslist: Array // Assuming toolslist is an array based on the warning message
+      toolslist: Array
     },
 
     data() {
       return {
-        categories: [
-                      {
-                        name: "Infrastructure",
-                        subCategories: [
-                          {
-                            name: "Official",
-                            tools: [
-                              { name: "Sail", imagePath: "/images/sail.png",githubUrl:"http://google.fr", websiteUrl:"http://google.fr"},
-                              { name: "Deploy", imagePath: "/images/deploy.png" },
-                              { name: "Test", imagePath: "/images/test.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" }
-                            ]
-                          },
-                          {
-                            name: "Product",
-                            tools: [
-                              { name: "Forge", imagePath: "/images/forge.png" },
-                              { name: "Forge", imagePath: "/images/forge.png" },
-                              { name: "Forge", imagePath: "/images/forge.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" }
-                            ]
-                          },
-                          {
-                            name: "Package",
-                            tools: [
-                              { name: "Forge", imagePath: "/images/forge.png" },
-                              { name: "Forge", imagePath: "/images/forge.png" },
-                              { name: "Forge", imagePath: "/images/forge.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" },
-                              { name: "Sail", imagePath: "/images/sail.png" }
-                            ]
-                          },
-                          // Ajoutez d'autres sous-catégories et outils selon le besoin...
-                        ]
-                      },
-                      {
-                        name: "Infrastructure",
-                        subCategories: [
-                          {
-                            name: "Official",
-                            tools: ["Sail", "Deploy", "Test","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail"]
-                          },
-                          {
-                            name: "Product",
-                            tools: ["Forge", "Forge", "Forge","Sail","Sail","Sail","Sail"]
-                          },
-                          {
-                            name: "Package",
-                            tools: ["Forge", "Forge", "Forge","Sail","Sail","Sail","Sail"]
-                          },
-                          // D'autres sous-catégories ici...
-                        ]
-                      },
-                      {
-                        name: "Infrastructure",
-                        subCategories: [
-                          {
-                            name: "Official",
-                            tools: ["Sail", "Deploy", "Test","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail","Sail"]
-                          },
-                          {
-                            name: "Product",
-                            tools: ["Forge", "Forge", "Forge","Sail","Sail","Sail","Sail"]
-                          },
-                          {
-                            name: "Package",
-                            tools: ["Forge", "Forge", "Forge","Sail","Sail","Sail","Sail"]
-                          },
-                          // D'autres sous-catégories ici...
-                        ]
-                      },
-                              // D'autres catégories ici...
-                    ],
-        selectedTool: null
+        selectedTool: null,
+        filterBy: '',
       };
     },
     methods: {
@@ -151,7 +76,26 @@
         }
     },
     mounted() {        
+       console.log(this.toolslist[0].sub_categories[0].tools.length)
         document.addEventListener('click', this.handleOutsideClick);
+    },
+    computed: {
+      filteredToolList() {
+        return this.toolslist.map(category => {
+            return {
+                ...category,
+                sub_categories: category.sub_categories.map(sub_category => {
+                    const filteredTools = sub_category.tools.filter(tool => {
+                        return tool.name.toLowerCase().includes(this.filterBy.toLowerCase());
+                    });
+                    return {
+                        ...sub_category,
+                        tools: filteredTools
+                    };
+                }).filter(sub_category => sub_category.tools.length > 0)
+            };
+        }).filter(category => category.sub_categories.length > 0);
+      }
     },
     beforeDestroy() {
         document.removeEventListener('click', this.handleOutsideClick);
@@ -163,7 +107,6 @@
         }
         },
         selectTool(tool) {
-            console.log(tool)
             this.selectedTool = tool;
         }
     }
@@ -173,18 +116,30 @@
 <style scoped>
 
 
+.search-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom:15px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  font-size: 16px;
+}
+
   /* Desktop */
   @media screen and (min-width: 1024px) {
-    .tools {
-      justify-content: flex-start !important;
+    #tech-landscape {
+      max-width:80%;
+      margin-top:20px;
     }
   }
 
   /* Tablette */
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .tools {
-      justify-content: flex-start !important;
-    }
   }
 
   /* Mobile */
@@ -192,10 +147,17 @@
 
   }
   
-  .tech-landscape {
+  #tech-landscape {
     background-color: #fff;
     padding:10px;
     flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top:20px !important;
+    margin-bottom:80px !important;
+    max-width:90%;
+    margin:auto;
   }
 
   .category {
@@ -240,7 +202,7 @@
 .tools {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 5px 0 5px 10px;
 }
   
@@ -249,6 +211,7 @@
   background-color: #f8f9fa; /* Gris clair pour les outils */
   border: 1px solid #dee2e6; /* Bordure pour séparer les outils */
   white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tool-image {

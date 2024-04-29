@@ -70,11 +70,11 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'name' => 'Breeze',
-                'description' => "Laravel Breeze is a minimal, simple implementation of all of Laravel's authentication features, including login, registration, password reset, email verification, and password confirmation. In addition, Breeze includes a simple \"profile\" page where the user may update their name, email address, and password.",
-                'imagePath' => '/images/breeze.PNG',
-                'websitePath' => 'https://laravel.com/docs/11.x/starter-kits#laravel-breeze',
-                'githubPath' => 'https://github.com/laravel/breeze',
+                'name' => 'Laravel Envoy',
+                'description' => "Laravel Envoy is a tool for executing common tasks you run on your remote servers. Using Blade style syntax, you can easily setup tasks for deployment, Artisan commands, and more. Currently, Envoy only supports the Mac and Linux operating systems. However, Windows support is achievable using WSL2.",
+                'imagePath' => '/images/default.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/envoy',
+                'githubPath' => 'https://github.com/laravel/envoy',
                 'sub_categories_id' => 7
             ],
             [
@@ -157,6 +157,24 @@ class ToolsSeeder extends Seeder
                 'websitePath' => 'https://laravel.com/docs/11.x/horizon',
                 'githubPath' => 'https://github.com/laravel/horizon',
                 'sub_categories_id' => 10 
+            ],
+            [
+                'id' => 17,
+                'name' => 'Fortify',
+                'description' => "Laravel Fortify is a frontend agnostic authentication backend implementation for Laravel. Fortify registers the routes and controllers needed to implement all of Laravel's authentication features, including login, registration, password reset, email verification, and more.",
+                'imagePath' => '/images/fortify.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/fortify',
+                'githubPath' => 'https://github.com/laravel/horizon',
+                'sub_categories_id' => 10 
+            ],
+            [
+                'id' => 18,
+                'name' => 'Larastan',
+                'description' => "Larastan focuses on finding errors in your code. It catches whole classes of bugs even before you write tests for the code. Adds static typing to Laravel to improve developer productivity and code quality. Supports most of Laravel's beautiful magic. Discovers bugs in your code",
+                'imagePath' => '/images/larastan.PNG',
+                'websitePath' => '',
+                'githubPath' => 'https://github.com/larastan/larastan',
+                'sub_categories_id' => 4 
             ]
         ];
 
