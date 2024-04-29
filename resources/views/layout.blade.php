@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Larael Landscape</title>
+        <title>Laravel Landscape</title>
         @vite('resources/css/app.css')
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
@@ -14,15 +14,15 @@
                 @yield('content')
             </div>
         </div>
+
+        @extends('footer')
+
         @vite('resources/js/app.js')
-        <script>
-            // Attache un écouteur d'événement à la barre de navigation pour les clics
-            document.querySelector('.navbar').addEventListener('click', function(e) {
-                // Assure-toi que l'élément cliqué est bien un lien
-                if (e.target.tagName === 'A') {
-                    // Trouve l'élément actuellement actif et retire la classe 'active'
+        
+        <script>       
+            document.querySelector('.navbar').addEventListener('click', function(e) {           
+                if (e.target.tagName === 'A') {          
                     document.querySelector('.navbar a.active').classList.remove('active');
-                    // Ajoute la classe 'active' à l'élément cliqué
                     e.target.classList.add('active');
                 }
             });

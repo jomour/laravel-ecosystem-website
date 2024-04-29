@@ -20,6 +20,14 @@ class CategoriesSeeder extends Seeder
             [
                 "id" => 2,
                 "name" => "Code Analysis"
+            ],
+            [
+                "id" => 3,
+                "name" => "Dev Kit"
+            ],
+            [
+                "id" => 4,
+                "name" => "Monitoring"
             ]
         ];
        

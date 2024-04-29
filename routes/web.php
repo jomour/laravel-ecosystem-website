@@ -9,5 +9,5 @@ Route::get('/', function () {
         $query->with('tools');
     }])->get()->toArray();
 
-    return view('welcome',['toolsList' => $toolsList]);
+    return view('landscape',['toolsList' => $toolsList]);
 });

@@ -14,6 +14,7 @@ class SubCategoriesSeeder extends Seeder
     public function run(): void
     {
         $subCategories = [
+            //INFRASTRUCTURE
             [
                 'id'=> 1,
                 'name' => 'Team Laravel',
@@ -29,20 +30,53 @@ class SubCategoriesSeeder extends Seeder
                 'name' => 'Package',
                 'categories_id' => 1
             ],
+            //CODE ANALYSIS
             [
-                'id'=> 1,
+                'id'=> 4,
                 'name' => 'Team Laravel',
                 'categories_id' => 2
             ],
             [
-                'id'=> 2,
+                'id'=> 5,
                 'name' => 'Product',
                 'categories_id' => 2
             ],
             [
-                'id'=> 3,
+                'id'=> 6,
                 'name' => 'Package',
                 'categories_id' => 2
+            ],
+            //Dev Kit
+            [
+                'id'=> 7,
+                'name' => 'Team Laravel',
+                'categories_id' => 3
+            ],
+            [
+                'id'=> 8,
+                'name' => 'Product',
+                'categories_id' => 3
+            ],
+            [
+                'id'=> 9,
+                'name' => 'Package',
+                'categories_id' => 3
+            ],
+            //Monitoring
+            [
+                'id'=> 10,
+                'name' => 'Team Laravel',
+                'categories_id' => 4
+            ],
+            [
+                'id'=> 11,
+                'name' => 'Product',
+                'categories_id' => 4
+            ],
+            [
+                'id'=> 12,
+                'name' => 'Package',
+                'categories_id' => 4
             ]
         ];
 
