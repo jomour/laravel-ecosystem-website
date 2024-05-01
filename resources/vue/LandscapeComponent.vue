@@ -87,7 +87,7 @@
                 ...category,
                 sub_categories: category.sub_categories.map(sub_category => {
                     const filteredTools = sub_category.tools.filter(tool => {
-                        return tool.name.toLowerCase().includes(this.filterBy.toLowerCase());
+                        return tool.name.toLowerCase().startsWith(this.filterBy.toLowerCase());
                     });
                     return {
                         ...sub_category,

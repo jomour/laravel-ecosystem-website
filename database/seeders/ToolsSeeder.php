@@ -175,6 +175,123 @@ class ToolsSeeder extends Seeder
                 'websitePath' => '',
                 'githubPath' => 'https://github.com/larastan/larastan',
                 'sub_categories_id' => 4 
+            ],
+            [
+                'id' => 19,
+                'name' => 'Folio',
+                'description' => "Laravel Folio is a powerful page based router designed to simplify routing in Laravel applications. With Laravel Folio, generating a route becomes as effortless as creating a Blade template within your application's resources/views/pages directory.",
+                'imagePath' => '/images/folio.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/folio',
+                'githubPath' => 'https://github.com/laravel/folio',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 20,
+                'name' => 'Homestead',
+                'description' => "Laravel strives to make the entire PHP development experience delightful, including your local development environment. Laravel Homestead is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to install PHP, a web server, or any other server software on your local machine.",
+                'imagePath' => '/images/homestead.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/homestead',
+                'githubPath' => 'https://github.com/laravel/homestead',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 21,
+                'name' => 'Passport',
+                'description' => "Laravel Passport provides a full OAuth2 server implementation for your Laravel application in a matter of minutes. Passport is built on top of the League OAuth2 server that is maintained by Andy Millington and Simon Hamp.",
+                'imagePath' => '/images/passport.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/passport',
+                'githubPath' => 'https://github.com/laravel/passport',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 22,
+                'name' => 'Pint',
+                'description' => "Laravel Pint is an opinionated PHP code style fixer for minimalists. Pint is built on top of PHP-CS-Fixer and makes it simple to ensure that your code style stays clean and consistent.",
+                'imagePath' => '/images/passport.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/pint',
+                'githubPath' => 'https://github.com/laravel/pint',
+                'sub_categories_id' => 4
+            ],
+            [
+                'id' => 23,
+                'name' => 'Precognition',
+                'description' => "Laravel Precognition allows you to anticipate the outcome of a future HTTP request. One of the primary use cases of Precognition is the ability to provide \"live\" validation in your frontend application.",
+                'imagePath' => '/images/default.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/precognition',
+                'githubPath' => 'https://github.com/laravel/precognition',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 24,
+                'name' => 'Prompts',
+                'description' => "Laravel Prompts is a PHP package for adding beautiful and user-friendly forms to your command-line applications, with browser-like features including placeholder text and validation. Laravel Prompts is perfect for accepting user input in your Artisan console commands, but it may also be used in any command-line PHP project.",
+                'imagePath' => '/images/prompts.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/prompts',
+                'githubPath' => 'https://github.com/laravel/prompts',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 25,
+                'name' => 'Pulse',
+                'description' => "Laravel Pulse delivers at-a-glance insights into your application's performance and usage. With Pulse, you can track down bottlenecks like slow jobs and endpoints, find your most active users, and more. For in-depth debugging of individual events, check out Laravel Telescope.",
+                'imagePath' => '/images/pulse.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/pulse',
+                'githubPath' => 'https://github.com/laravel/pulse',
+                'sub_categories_id' => 10
+            ],
+            [
+                'id' => 26,
+                'name' => 'Reverb',
+                'description' => "Laravel Reverb brings real-time WebSocket communication for Laravel applications.",
+                'imagePath' => '/images/reverb.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/reverb',
+                'githubPath' => 'https://github.com/laravel/reverb',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 27,
+                'name' => 'Sanctum',
+                'description' => "Laravel Sanctum provides a featherweight authentication system for SPAs and simple APIs.",
+                'imagePath' => '/images/sanctum.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/sanctum',
+                'githubPath' => 'https://github.com/laravel/sanctum',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 28,
+                'name' => 'Scout',
+                'description' => "Laravel Scout provides a simple, driver-based solution for adding full-text search to your Eloquent models. Once Scout is installed and configured, it will automatically sync your model changes to your search indexes.",
+                'imagePath' => '/images/scout.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/scout',
+                'githubPath' => 'https://github.com/laravel/scout',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 29,
+                'name' => 'Socialite',
+                'description' => "In addition to typical, form based authentication, Laravel also provides a simple, convenient way to authenticate with OAuth providers using Laravel Socialite. Socialite currently supports authentication via Facebook, Twitter, LinkedIn, Google, GitHub, GitLab, Bitbucket, and Slack.",
+                'imagePath' => '/images/socialite.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/socialite',
+                'githubPath' => 'https://github.com/laravel/socialite',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 30,
+                'name' => 'Telescope',
+                'description' => "Laravel Telescope makes a wonderful companion to your local Laravel development environment. Telescope provides insight into the requests coming into your application, exceptions, log entries, database queries, queued jobs, mail, notifications, cache operations, scheduled tasks, variable dumps, and more.",
+                'imagePath' => '/images/telescope.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/telescope',
+                'githubPath' => 'https://github.com/laravel/telescope',
+                'sub_categories_id' => 7
+            ],
+            [
+                'id' => 31,
+                'name' => 'Valet',
+                'description' => "Laravel Valet is a development environment for macOS minimalists. Laravel Valet configures your Mac to always run Nginx in the background when your machine starts. Then, using DnsMasq, Valet proxies all requests on the *.test domain to point to sites installed on your local machine.",
+                'imagePath' => '/images/valet.PNG',
+                'websitePath' => 'https://laravel.com/docs/11.x/valet',
+                'githubPath' => 'https://github.com/laravel/valet',
+                'sub_categories_id' => 7
             ]
         ];
 
