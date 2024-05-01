@@ -23,6 +23,7 @@
                   <div class="tools">
                     <div class="tool" v-for="tool in subCategory.tools" :key="tool" @click.stop="selectTool(tool)">
                       <img :src="tool.imagePath" :alt="tool.name" class="tool-image"/>
+                      <div class="tool-title">{{ tool.name }}</div>
                     </div>
                   </div>
               </div>
@@ -212,6 +213,12 @@
   border: 1px solid #dee2e6; /* Bordure pour séparer les outils */
   white-space: nowrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid lightgrey;
+}
+
+.tool-title {
+  padding:0.5rem;
+  font-size:0.5rem;
 }
 
 .tool-image {

@@ -124,7 +124,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'id' => 13,
-                'name' => 'JETSTREAM',
+                'name' => 'Jetstream',
                 'description' => "Laravel Jetstream is a beautifully designed application starter kit for Laravel and provides the perfect starting point for your next Laravel application. Jetstream provides the implementation for your application's login, registration, email verification, two-factor authentication, session management, API via Laravel Sanctum, and optional team management features.",
                 'imagePath' => '/images/jetstream.PNG', 
                 'websitePath' => 'https://jetstream.laravel.com/',
@@ -133,7 +133,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'id' => 14,
-                'name' => 'LIVEWIRE',
+                'name' => 'Livewire',
                 'description' => "The most productive way to build your next web app. Powerful, dynamic, front-end UIs without leaving PHP.",
                 'imagePath' => '/images/livewire.PNG',
                 'websitePath' => 'https://livewire.laravel.com/',
@@ -142,7 +142,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'id' => 15,
-                'name' => 'NOVA',
+                'name' => 'Nova',
                 'description' => "Nova is the simplest and fastest way to build production-ready administration panels using Laravel. Simply composer require laravel/nova, nova:install, and you're ready to go.",
                 'imagePath' => '/images/nova.PNG',
                 'websitePath' => 'https://nova.laravel.com/',
