@@ -76,8 +76,8 @@
         this.selectedTool = null;
         }
     },
-    mounted() {        
-       console.log(this.toolslist[0].sub_categories[0].tools.length)
+    mounted() {
+        console.log(this.toolslist)        
         document.addEventListener('click', this.handleOutsideClick);
     },
     computed: {
@@ -87,7 +87,7 @@
                 ...category,
                 sub_categories: category.sub_categories.map(sub_category => {
                     const filteredTools = sub_category.tools.filter(tool => {
-                        return tool.name.toLowerCase().startsWith(this.filterBy.toLowerCase());
+                        return (tool.name.toLowerCase().startsWith(this.filterBy.toLowerCase()) || tool.description.toLowerCase().includes(this.filterBy.toLowerCase()) );
                     });
                     return {
                         ...sub_category,

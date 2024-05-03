@@ -292,6 +292,78 @@ class ToolsSeeder extends Seeder
                 'websitePath' => 'https://laravel.com/docs/11.x/valet',
                 'githubPath' => 'https://github.com/laravel/valet',
                 'sub_categories_id' => 7
+            ],
+            [
+                'id' => 32,
+                'name' => 'Laravel Excell',
+                'description' => "Supercharged Excel exports and imports in Laravel.",
+                'imagePath' => '/images/laravelexcell.PNG',
+                'websitePath' => 'https://laravel-excel.com/',
+                'githubPath' => 'https://github.com/SpartnerNL/Laravel-Excel',
+                'sub_categories_id' => 9
+            ],
+            [
+                'id' => 33,
+                'name' => 'Monica',
+                'description' => "Monica is an open-source web application that enables you to document your life, organize, and log your interactions with your family and friends. We call it a PRM, or Personal Relationship Management. Imagine a CRM—a commonly used tool by sales teams in the corporate world—for your friends and family.",
+                'imagePath' => '/images/monica.PNG',
+                'websitePath' => 'https://docs.monicahq.com/',
+                'githubPath' => 'https://github.com/monicahq/monica',
+                'sub_categories_id' => 9
+            ],
+            [
+                'id' => 34,
+                'name' => 'Flarum',
+                'description' => "Flarum is a delightfully simple discussion platform for your website. It's fast and easy to use, with all the features you need to run a successful community.",
+                'imagePath' => '/images/flarum.PNG',
+                'websitePath' => 'https://flarum.org/',
+                'githubPath' => 'https://github.com/flarum/flarum',
+                'sub_categories_id' => 9
+            ],
+            [
+                'id' => 35,
+                'name' => 'Filament',
+                'description' => "A collection of beautiful full-stackcomponents. The perfect starting point for your next app.",
+                'imagePath' => '/images/filament.PNG',
+                'websitePath' => 'https://filamentphp.com/',
+                'githubPath' => 'https://github.com/filamentphp/filament',
+                'sub_categories_id' => 9
+            ],
+            [
+                'id' => 36,
+                'name' => 'BookStack',
+                'description' => "BookStack is an opinionated documentation platform that provides a pleasant and simple out-of-the-box experience. New users to an instance should find the experience intuitive and only basic word-processing skills should be required to get involved in creating content on BookStack. The platform should provide advanced power features to those that desire it but they should not interfere with the core simple user experience.",
+                'imagePath' => '/images/bookstack.PNG',
+                'websitePath' => 'https://www.bookstackapp.com/',
+                'githubPath' => 'https://github.com/BookStackApp/BookStack',
+                'sub_categories_id' => 9
+            ],
+            [
+                'id' => 37,
+                'name' => 'Cachet',
+                'description' => "Cachet, the open-source status page system.",
+                'imagePath' => '/images/default.PNG',
+                'websitePath' => '',
+                'githubPath' => 'https://github.com/cachethq/cachet',
+                'sub_categories_id' => 12
+            ],
+            [
+                'id' => 38,
+                'name' => 'Flare',
+                'description' => "Flare is built specifically for Laravel projects. The amount of context and insights we provide for each error is very extensive. With all the pinpointing already done, you can invest all your time in actually fixing things.",
+                'imagePath' => '/images/flare.PNG',
+                'websitePath' => 'https://flareapp.io/',
+                'githubPath' => '',
+                'sub_categories_id' => 11
+            ],
+            [
+                'id' => 39,
+                'name' => 'Debugbar',
+                'description' => "This is a package to integrate PHP Debug Bar with Laravel. It includes a ServiceProvider to register the debugbar and attach it to the output. You can publish assets and configure it through Laravel.",
+                'imagePath' => '/images/default.PNG',
+                'websitePath' => '',
+                'githubPath' => 'https://github.com/barryvdh/laravel-debugbar',
+                'sub_categories_id' => 11
             ]
         ];
 
