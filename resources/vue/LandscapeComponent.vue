@@ -8,7 +8,7 @@
           class="search-input" 
           v-model="filterBy" 
           @input="search"
-          placeholder="Rechercher...">
+          placeholder="Search by title or description...">
       </div>
       <div class="category" v-for="category in filteredToolList" :key="category.name">
         
