@@ -342,7 +342,7 @@ class ToolsSeeder extends Seeder
                 'id' => 37,
                 'name' => 'Cachet',
                 'description' => "Cachet, the open-source status page system.",
-                'imagePath' => '/images/default.PNG',
+                'imagePath' => '/images/cachet.PNG',
                 'websitePath' => '',
                 'githubPath' => 'https://github.com/cachethq/cachet',
                 'sub_categories_id' => 12

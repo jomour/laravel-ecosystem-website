@@ -1,7 +1,18 @@
 import { createApp } from "vue";
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+
 const app = createApp({});
+const vuetify = createVuetify({
+  components,
+  directives
+})
 
 // Crée une fonction asynchrone pour charger et enregistrer les composants
 async function loadComponents() {
@@ -16,7 +27,7 @@ async function loadComponents() {
     }
   }
 
-  loadComponents().then(() => {
-    app.mount("#app");
-  });
+loadComponents().then(() => {
+  app.use(vuetify).mount("#app");
+});
 

@@ -76,8 +76,7 @@
         this.selectedTool = null;
         }
     },
-    mounted() {
-        console.log(this.toolslist)        
+    mounted() {      
         document.addEventListener('click', this.handleOutsideClick);
     },
     computed: {
@@ -299,12 +298,12 @@
 
 .icon-link {
   margin: 0 10px;
-  color: #333; /* Ou la couleur de votre choix */
-  font-size: 1.5rem; /* Ajustez la taille de l'icône selon vos besoins */
+  color: #333; 
+  font-size: 1.5rem;
 }
 
 .icon-link:hover {
-  color: #007bff; /* Ou la couleur souhaitée au survol */
+  color: #007bff;
 }
 
   </style>
